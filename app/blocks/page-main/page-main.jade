@@ -1,0 +1,8 @@
+include /blocks/select/select
+
+mixin page-main()
+	+b.page-main&attributes(attributes)
+		+select('Language', 'English',
+				[{name: 'English', id: 'eng'},
+				{name: 'Русский', id: 'rus'}
+				])

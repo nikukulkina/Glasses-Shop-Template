@@ -1,6 +1,8 @@
 extends /blocks/layout-default/layout-default
+include /blocks/page-main/page-main
 
-block head
-	- var pageTitle = 'CSSSR Project Template';
+//- block head
+//- 	- var pageTitle = 'LEO Shop';
 
 block content
+	+page-main()

@@ -1,0 +1,26 @@
+include /blocks/logo/logo
+include /blocks/mobile-menu/mobile-menu
+include /blocks/nav/nav
+include /blocks/search/search
+include /blocks/cart/cart
+
+mixin header-content()
+	+b.header-content&attributes(attributes)
+		+e.main
+			+mobile-menu([
+				{name:'home', href:'#'},
+				{name:'women', href:'#'},
+				{name:'men', href:'#'},
+				{name:'other', href:'#'},
+				{name:'purchase', href:'#'}])
+			+logo()
+			+nav([
+				{name:'home', href:'#'},
+				{name:'women', href:'#'},
+				{name:'men', href:'#'},
+				{name:'other', href:'#'},
+				{name:'purchase', href:'#'}])
+		+e.action
+			+search()
+			+e('a').bookmarks(href='#')
+			+cart()

@@ -1,0 +1,6 @@
+mixin nav(items)
+	+b('nav').nav&attributes(attributes)
+		+e('ul').list
+			each item in items
+				+e('li').item
+					+e('a').link(href=item.href)!= item.name

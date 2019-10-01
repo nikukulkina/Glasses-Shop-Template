@@ -1,0 +1,21 @@
+.search
+	position relative
+	padding 3px
+	display flex
+	border 1px solid $text-gray
+	&__text
+		border none
+	&__submit
+		position relative
+		width 14px
+		&:before
+			position absolute
+			top 50%
+			left 0
+			font-family 'icomoon'
+			content '\f002'
+			color $text-gray
+			transform translateY(-50%)
+	@media(max-width 359px)
+		&__text
+			width 105px

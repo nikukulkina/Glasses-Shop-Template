@@ -3,7 +3,7 @@ mixin select(name, preset, items)
 		+e('span').name!=name
 		+e.wrap.js-dropdown
 			+e('button').field.js-select(type='button')!=preset
-			+e('input').js-item(type='hidden' name='language')
+			+e('input').js-item(type='hidden' name!=name)
 			+e('ul').menu.js-select-menu
 				each item in items
 					+e('li').menu-item

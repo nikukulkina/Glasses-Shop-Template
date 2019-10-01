@@ -1,24 +1,30 @@
 .select
 	position relative
-	width 170px
-	color #ffffff
+	display flex
+	width 140px
+	font-size 13px
+	color $text-blue
 	background-color transparent
+	&_mobile
+		width 55px
+
 	&__wrap
 		position relative
 		display inline-block
 
 	&__name
 		margin-right 7px
+		line-height 18px
 
 	&__field
 		position relative
-		width 70px
 		text-align left
+		color #ffffff
 	
 		&::after
 			position absolute
 			top 50%
-			right 0
+			right -20px
 			display block
 			width 12px
 			height 8px
@@ -44,11 +50,16 @@
 		width 100%
 		max-height 144px
 
-
 	&__menu-item
 		transition background-color .3s ease-in
 		&:hover
 			background-color rgba(0, 0, 0, .1)
+	&__menu-button
+		color #ffffff
+		transition color .3s ease-in
+		&:hover
+			text-decoration underline
+			color $text-blue
 
 
 

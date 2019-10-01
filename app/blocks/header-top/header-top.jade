@@ -1,0 +1,35 @@
+include /blocks/select/select
+include /blocks/links/links
+
+mixin header-top()
+	+b.header-top&attributes(attributes)
+		+e.selects
+			+select('Language', 'English',
+				[{name: 'English', id: 'eng'},
+				{name: 'Русский', id: 'rus'}
+				])
+			+select('Currency', 'USD',
+				[{name: 'USD', id: 'usd'},
+				{name: 'RUB', id: 'rub'}
+				])
+		+e.selects-mobile
+			+select(' ', 'ENG',
+				[{name: 'ENG', id: 'usd'},
+				{name: 'РУС', id: 'rub'}
+				])._mobile
+			+select(' ', 'USD',
+				[{name: 'USD', id: 'usd'},
+				{name: 'RUB', id: 'rub'}
+				])._mobile
+		+e.links
+			+links([
+				{name: 'Account', href: '#'},
+				{name: 'Wishlist', href: '#'},
+				{name: 'Checklist', href: '#'},
+				{name: 'Log In', href: '#'},
+				{name: 'Sign In', href: '#'}
+				])
+			+links([
+				{name: 'Log In', href: '#'},
+				{name: 'Sign In', href: '#'}
+				])._mobile

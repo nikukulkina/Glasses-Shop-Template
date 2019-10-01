@@ -1,0 +1,77 @@
+.mobile-menu
+	margin-top -5px
+	display none
+	&__button
+		position fixed
+		z-index 30
+		width 40px
+		height 40px
+		cursor pointer
+		transition background .5s ease-in
+		&:hover
+			.mobile-menu__lines
+				filter brightness(.7) 
+	&__lines,
+	&__lines:before,
+	&__lines:after
+		position absolute
+		width 40px
+		height 6px
+		background-color $blue
+		transition transform .3s ease-in
+
+	&__lines
+		top 50%
+		transform translateY(-50%)
+	&__lines:before
+		top -12px
+		content ''
+	&__lines:after
+		top 12px
+		content ''
+	&__nav
+		position fixed
+		z-index 20
+		left -100%
+		padding-top 40px
+		display flex
+		flex-flow column
+		overflow-y auto
+		width 130px
+		background $text-blue
+		transition .3s ease-in
+	&__item
+		padding 15px
+		background transparent
+		border-bottom 1px solid $blue
+		transition background .3s ease-in
+		&:first-child
+			margin-top 5px
+			border-top 1px solid $blue
+
+		&:hover
+			background $blue
+
+	&__link
+		font-size 16px
+		font-weight 600
+		text-decoration none
+		text-transform uppercase
+		letter-spacing -.5px
+		color $text-gray
+	&_active
+		.mobile-menu
+			&__button
+				background $text-blue							
+			&__lines
+				background-color transparent
+			&__lines:before
+				top 50%
+				transform rotate(45deg)
+			&__lines:after
+				top 50%
+				transform rotate(-45deg)
+			&__nav
+				left 30px
+	@media(max-width 600px)
+		display block

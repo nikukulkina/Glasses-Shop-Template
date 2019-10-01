@@ -1,0 +1,5 @@
+mixin links(items)
+	+b.links&attributes(attributes)
+		each link in items
+			+e('a').link(href=link.href)
+				+e('span').item!=link.name

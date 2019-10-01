@@ -1,8 +1,6 @@
-include /blocks/select/select
+include /blocks/header/header
 
 mixin page-main()
 	+b.page-main&attributes(attributes)
-		+select('Language', 'English',
-				[{name: 'English', id: 'eng'},
-				{name: 'Русский', id: 'rus'}
-				])
+		+e.overlay
+		+header()

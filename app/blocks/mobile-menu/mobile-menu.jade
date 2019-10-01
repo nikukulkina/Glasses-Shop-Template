@@ -1,0 +1,9 @@
+mixin mobile-menu(items)
+	+b.mobile-menu&attributes(attributes)
+		+e('a').button.js-mobile-menu-button
+			+e('span').lines
+		+e('nav').nav
+			+e('ul').list
+				each link in items
+					+e('li').item
+						+e('a').link.js-mobile-menu-link(href!=link.href)!=link.name

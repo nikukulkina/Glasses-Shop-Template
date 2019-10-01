@@ -1,0 +1,33 @@
+.links
+	display flex
+	justify-content flex-end
+	&_mobile
+		display none
+	&__link
+		text-decoration none
+		color #ffffff
+		border-left 1px solid #ffffff
+		transition color .3s ease-in 
+		&:first-child
+			border-left none
+		&:hover
+			text-decoration underline
+			color $text-blue
+	&__item
+		padding 0 15px
+		font-size 13px
+		
+	@media(max-width 782px)
+		&__item
+			padding 0 10px
+	@media(max-width 505px)
+		display none
+		&_mobile
+			display flex
+		&__item
+			font-size 15px
+	
+
+	
+
+

@@ -1,8 +1,12 @@
 include /blocks/header/header
+include /blocks/services/services
 include /blocks/footer/footer
 
 mixin page-main()
 	+b.page-main&attributes(attributes)
 		+e.overlay
 		+header()
+		+e.services-wrap
+			+container()
+				+services()
 		+footer()

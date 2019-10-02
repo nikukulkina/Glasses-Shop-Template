@@ -1,0 +1,4 @@
+mixin service(name, href)
+	+b.service&attributes(attributes)
+		+e.image
+		+e('a').link(href!=href)!=name

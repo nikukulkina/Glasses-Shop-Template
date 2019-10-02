@@ -1,0 +1,9 @@
+include /blocks/container/container
+include /blocks/footer-inner/footer-inner
+
+
+mixin footer()
+	+b('footer').footer&attributes(attributes)
+		+e.wrap
+			+container()
+				+footer-inner()

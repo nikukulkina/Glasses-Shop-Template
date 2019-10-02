@@ -1,0 +1,17 @@
+
+
+mixin footer-inner()
+	+b.footer-inner&attributes(attributes)
+		+e.wrap
+			+e.copyrights © Copyright 2013 Css Author, All Rights Reserved.
+			+links([
+				{name: 'About Us', href: '#'},
+				{name: 'Delivery & Returns', href: '#'},
+				{name: 'Terms & Conditions', href: '#'},
+				{name: 'Contact Us', href: '#'}
+				])._footer
+			+links([
+				{name: 'About Us', href: '#'},
+				{name: 'Delivery', href: '#'},
+				{name: 'Terms', href: '#'}
+				])._footer._mobile

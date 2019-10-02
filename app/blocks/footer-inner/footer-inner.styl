@@ -1,0 +1,24 @@
+.footer-inner
+	&__wrap
+		display flex
+		justify-content space-between
+		align-items center
+		flex-wrap wrap
+	&__copyrights
+		font-size 13px
+		color $text-blue
+	@media(max-width 850px)
+		&__wrap
+			flex-flow column-reverse
+		&__copyrights
+			padding-top 5px
+	@media(max-width 359px)
+		&__copyrights
+			font-size 12px
+	@media(max-width 336px)
+		&__copyrights
+			text-align center
+
+	
+
+	

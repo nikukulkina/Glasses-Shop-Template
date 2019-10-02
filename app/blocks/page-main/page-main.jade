@@ -1,6 +1,8 @@
 include /blocks/header/header
+include /blocks/footer/footer
 
 mixin page-main()
 	+b.page-main&attributes(attributes)
 		+e.overlay
 		+header()
+		+footer()

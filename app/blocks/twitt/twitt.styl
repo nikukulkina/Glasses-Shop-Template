@@ -1,0 +1,27 @@
+.twitt
+	margin-bottom 20px
+	display flex
+	&__icon
+		position relative
+		margin-right 5px
+		flex-shrink 0
+		width 45px
+		height 45px
+		font-size 25px
+		color $blue
+		background-color #ffffff
+		border-radius 50%
+		&:before
+			position absolute
+			top 50%
+			left 50%
+			font-family 'icomoon'
+			content '\f099'
+			transform translate(-50%, -50%)
+	&__link
+		line-height 19px
+		text-decoration none
+		color #ffffff
+		transition color .3s ease-in
+		&:hover
+			color $text-blue

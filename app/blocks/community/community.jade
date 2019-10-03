@@ -1,0 +1,11 @@
+include /blocks/facebook/facebook
+include /blocks/twitter/twitter
+include /blocks/information/information
+include /blocks/contacts/contacts
+
+mixin community()
+	+b.community&attributes(attributes)
+		+facebook()
+		+twitter()
+		+information()
+		+contacts()

@@ -1,0 +1,14 @@
+include /blocks/icons/icons
+
+mixin contacts()
+	+b.contacts&attributes(attributes)
+		+e('p').title Contact us
+		+e('ul').list
+			+e('li').item Leo Store
+			+e('li').item Leopards media
+			+e('li').item KVM Rpad, 4590GH
+			+e('li').item
+				+e('a').link(href="#") +1 489-8888-0099
+			+e('li').item
+				+e('a').link(href="#") mail@email.com
+		+icons()

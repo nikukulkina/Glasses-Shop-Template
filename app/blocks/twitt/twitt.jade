@@ -1,0 +1,4 @@
+mixin twitt(text, href)
+	+b.twitt&attributes(attributes)
+		+e.icon
+		+e('a').link(href!=href)!=text

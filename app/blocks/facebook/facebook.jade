@@ -1,0 +1,10 @@
+include /blocks/people/people
+
+mixin facebook()
+	+b.facebook&attributes(attributes)
+		+e('p').title Facebook
+		+e('p').members 20000 memebers
+		+e('button').btn
+			+e('img').image(src='/assets/images/like.png' alt='like')
+		+people()
+		+e('a').plugin-link(href='#') facebook Social plugin

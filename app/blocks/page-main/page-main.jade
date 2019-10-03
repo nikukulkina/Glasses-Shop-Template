@@ -1,5 +1,6 @@
 include /blocks/header/header
 include /blocks/services/services
+include /blocks/community/community
 include /blocks/footer/footer
 
 mixin page-main()
@@ -9,4 +10,7 @@ mixin page-main()
 		+e.services-wrap
 			+container()
 				+services()
+		+e.community-wrap
+			+container()
+				+community()
 		+footer()

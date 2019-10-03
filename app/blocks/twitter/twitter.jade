@@ -1,0 +1,8 @@
+include /blocks/twitt/twitt
+
+mixin twitter()
+	+b.twitter&attributes(attributes)
+		+e('p').title From twitter
+		+e.twitt-wrap
+			+twitt('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the', '#')
+			+twitt('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the', '#')

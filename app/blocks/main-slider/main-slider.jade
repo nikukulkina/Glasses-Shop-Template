@@ -1,0 +1,17 @@
+mixin main-slider()
+	+b.main-slider&attributes(attributes)
+		+e.wrapper
+			+e.slider-container.swiper-container
+				+e.slides.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.slide-wrapper
+							+e('p').slide-text ALUMINUM CLUB
+							+e('p').slide-text._bold Experience Ray-Ban
+					+e.slide.swiper-slide
+						+e.slide-wrapper
+							+e('p').slide-text ALUMINUM CLUB
+							+e('p').slide-text._bold Experience Ray-Ban
+			+e.btn-prev-wrap
+				+e('button').btn-prev
+			+e.btn-next-wrap
+				+e('button').btn-next

@@ -1,0 +1,89 @@
+.main-slider
+	&__slider-container
+		width 100%
+		height 477px
+	&__wrapper
+		position relative
+	&__btn-prev-wrap,
+	&__btn-next-wrap
+		position absolute
+		top 50%
+		transform translateY(-50%)
+	&__btn-next-wrap
+		right -25px
+	&__btn-prev-wrap
+		left -25px
+	&__slide-wrapper
+		padding 0 70px
+		display flex
+		flex-flow column
+		justify-content center
+		width 90%
+		height 100%
+	&__slide-text
+		margin-bottom 3px
+		padding 0 20px
+		width fit-content
+		text-transform uppercase
+		font-size 28px
+		font-weight 300
+		line-height 50px
+		color #ffffff
+		background-color rgba(0, 0, 0, .6)
+		&_bold
+			padding 0 15px
+			font-weight 800
+	&__btn-prev,
+	&__btn-next
+		position relative
+		width 60px
+		height 60px
+		font-size 55px
+		color #cdcdcd
+		background-color #ffffff
+		border-radius 50%
+		transition .3s ease-in
+		&:before
+			position absolute
+			top 46%
+			left 50%
+			font-family 'icomoon'
+			content ''
+			transform translate(-50%, -50%)
+	&__btn-prev
+		&:before
+			content '\f104'
+	&__btn-next
+		&:before
+			content '\f105'
+	&__btn-prev:hover,
+	&__btn-next:hover
+		color #c0bebe
+		background-color #e7e3e3
+	@media(max-width 900px)
+		&__slider-container
+			height 300px
+	@media(max-width 550px)
+		&__slider-container
+			height 250px
+		&__btn-prev,
+		&__btn-next
+			width 40px
+			height 40px
+			font-size 35px
+		&__slide-text
+			font-size 20px
+			line-height 30px
+		&__slide-wrapper
+			padding 0 30px
+	@media(max-width 400px)
+		&__slide-text
+			padding 0 10px
+			font-size 18px
+	@media(max-width 359px)
+		&__btn-next-wrap
+			right -15px
+		&__btn-prev-wrap
+			left -15px
+		&__slide-text
+			font-size 16px

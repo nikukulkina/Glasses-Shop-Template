@@ -11,9 +11,15 @@
 		&_active
 			visibility visible
 			background-color rgba(0, 0, 0, .2)
+	&__slider-wrap
+		background-image url(/assets/images/slider-image.png)
+		background-size cover
 	&__services-wrap
 		padding 20px 0
 		background-color $light-blue
 	&__community-wrap
 			padding 20px 0
 			background-color $blue
+	@media(max-width 550px)
+		&__slider-wrap
+			background-position-x 40%

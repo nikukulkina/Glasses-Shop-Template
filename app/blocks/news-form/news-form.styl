@@ -1,0 +1,31 @@
+.news-form
+	padding 0 10px 20px
+	display flex
+	flex-flow column
+	align-items center
+	text-align center
+	&__title
+		padding-bottom 30px
+		font-size 24px
+		text-transform uppercase
+		letter-spacing -1px
+		color #635f57
+	&__mail
+		margin-bottom 15px
+		padding 3px 5px
+		width 80%
+		border 1px solid #ededed
+	&__description
+		position relative
+		margin-bottom 20px
+		padding-bottom 10px
+		color #635f57
+		&:after
+			position absolute
+			left 50%
+			bottom 0
+			width 40%
+			height 1px
+			transform translateX(-50%)
+			content ''
+			background-color #ededed

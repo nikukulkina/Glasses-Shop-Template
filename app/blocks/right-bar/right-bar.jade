@@ -1,6 +1,11 @@
+include /blocks/wrap/wrap
 include /blocks/auxiliary-slider/auxiliary-slider
-
+include /blocks/news-form/news-form
 
 mixin right-bar()
 	+b.right-bar&attributes(attributes)
-		+auxiliary-slider()
+		+wrap()
+			+auxiliary-slider()
+		+e.wrapper-outer
+			+wrap()
+				+news-form()

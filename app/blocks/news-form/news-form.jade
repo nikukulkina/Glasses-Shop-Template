@@ -1,0 +1,8 @@
+include /blocks/button/button
+
+mixin news-form()
+	+b('form').news-form&attributes(attributes)
+		+e('p').title newsletters signup
+		+e('p').description Lorem ipsum dolor sit amen, dolor imun ra adlip
+		+e('input').mail(type='text')
+		+button('Subscribe', 'submit')

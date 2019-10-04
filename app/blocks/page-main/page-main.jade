@@ -1,5 +1,7 @@
 include /blocks/header/header
 include /blocks/main-slider/main-slider
+include /blocks/container/container
+include /blocks/main/main
 include /blocks/services/services
 include /blocks/community/community
 include /blocks/footer/footer
@@ -11,6 +13,9 @@ mixin page-main()
 		+e.slider-wrap
 			+container()
 				+main-slider()
+		+e.main-wrap
+			+container()
+				+main()
 		+e.services-wrap
 			+container()
 				+services()

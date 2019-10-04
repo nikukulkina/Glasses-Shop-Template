@@ -1,0 +1,17 @@
+include /blocks/button/button
+
+mixin auxiliary-slider()
+	+b.auxiliary-slider&attributes(attributes)
+		+e.title Featured glasses
+		+e.wrapper
+			+e.slider-container.swiper-container
+				+e.slides.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.btn-wrap
+							+button('Check It Out', 'button')._blue
+					+e.slide.swiper-slide
+					+e.slide.swiper-slide
+		+e.pagination
+			+e.dot._active
+			+e.dot
+			+e.dot

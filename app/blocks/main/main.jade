@@ -1,0 +1,8 @@
+include /blocks/main-content/main-content
+include /blocks/right-bar/right-bar
+
+
+mixin main()
+	+b('main').main&attributes(attributes)
+		+main-content()
+		+right-bar()

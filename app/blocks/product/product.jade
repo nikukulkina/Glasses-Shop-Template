@@ -1,0 +1,11 @@
+mixin product(img, description, price, sale, NEW)
+	+b.product&attributes(attributes)
+		if NEW
+			+e.ribbon NEW
+		if sale	
+			+e.ribbon._sale SALE
+		+e.wrap
+			+e('img').image(src=img)
+		+e.details
+			+e('p').name!=description
+			+e('span').price!=price

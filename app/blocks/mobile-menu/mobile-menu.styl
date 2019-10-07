@@ -1,5 +1,6 @@
 .mobile-menu
 	display none
+
 	&__button
 		position relative
 		z-index 30
@@ -24,12 +25,13 @@
 	&__lines
 		top 50%
 		transform translateY(-50%)
-	&__lines:before
-		top -12px
-		content ''
-	&__lines:after
-		top 12px
-		content ''
+		&:before
+			top -12px
+			content ''
+		&:after
+			top 12px
+			content ''
+
 	&__nav
 		position fixed
 		z-index 20
@@ -37,12 +39,14 @@
 		margin-top -15px
 		padding-top 60px
 		display flex
-		flex-flow column
 		overflow-y auto
+		flex-flow column
 		width 100%
 		text-align center
-		background $text-blue
+
+		background-color $text-blue
 		transition .3s ease-in
+
 	&__item
 		padding 15px
 		background transparent
@@ -51,7 +55,7 @@
 		&:first-child
 			margin-top 5px
 			border-top 1px solid $blue
-
+			
 		&:hover
 			background $blue
 
@@ -62,19 +66,25 @@
 		text-transform uppercase
 		letter-spacing -.5px
 		color $text-gray
+
 	&_active
 		.mobile-menu
 			&__button
-				background $text-blue							
+				background $text-blue
+
 			&__lines
 				background-color transparent
+
 			&__lines:before
 				top 50%
 				transform rotate(45deg)
+
 			&__lines:after
 				top 50%
 				transform rotate(-45deg)
+				
 			&__nav
 				left 0
+
 	@media(max-width 600px)
 		display block

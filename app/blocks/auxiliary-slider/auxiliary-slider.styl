@@ -2,24 +2,29 @@
 	display flex
 	flex-flow column
 	align-items center
+
 	&__title
 		padding-bottom 10px
 		font-size 24px
 		text-transform uppercase
 		letter-spacing -1px
 		color #635f57
+
 	&__slider-container
 		margin-bottom 20px
 		width 208px
 		height 340px
+
 	&__slide
 		position relative
 		background-image url(/assets/images/girl-in-glasses.png)
+
 	&__btn-wrap
 		position absolute
 		bottom 10px
 		width 100%
 		text-align center
+
 	&__dot
 		margin-left 10px
 		width 12px
@@ -27,8 +32,10 @@
 		cursor pointer
 		background-color $green
 		border-radius 50%
+
 		&_active
 			background-color $blue
+
 	&__pagination
 		padding 15px 0
 		display flex
@@ -39,6 +46,6 @@
 	@media(max-width 1000px)
 		&__slider-container
 			width 190px
+			
 		&__title
 			text-align center
-		

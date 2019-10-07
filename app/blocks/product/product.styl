@@ -6,6 +6,7 @@
 	width 220px
 	height 320px
 	box-shadow 0 1px 5px 0 #E0E0E0
+
 	&__ribbon
 		position absolute
 		z-index 5
@@ -17,6 +18,7 @@
 		color #ffffff
 		background-color $blue
 		border-bottom 1px solid $dark-blue
+
 		&:before,
 		&:after
 			position absolute
@@ -27,10 +29,13 @@
 			content ''
 			background-color $blue
 			border-bottom 1px solid $dark-blue
+
 		&:before
 			right 100%
+
 		&:after
 			left 100%
+
 		&_sale
 			left 0
 			width fit-content
@@ -38,6 +43,7 @@
 			transform translateX(-30%) translateY(0%) rotate(-45deg)
 			background-color $green
 			border-bottom 1px solid green
+
 			&:before,
 			&:after
 				background-color $green
@@ -48,21 +54,27 @@
 		justify-content center
 		align-items center
 		height 220px
+
 	&__image
 		transition .3s ease-in
+
 		&:hover
 			transform scale(1.1)
+
 	&__bottom-wrap
 		margin 15px 0
 		display flex
 		justify-content space-between
 		align-items center
+
 	&__details
 		padding-right 5px
 		display block
 		text-decoration none
+
 		&:hover
 			text-decoration underline
+
 	&__to-cart
 		position relative
 		display block
@@ -73,6 +85,7 @@
 		background-color $green
 		border-radius 50%
 		transition background-color .3s ease-in
+
 		&:before
 			position absolute
 			top 50%
@@ -80,25 +93,33 @@
 			font-family 'icomoon'
 			content '\f291'
 			transform translate(-50%, -50%)
+
 		&:hover
 			background-color $blue
+
 	&__name
 		font-size 14px
 		line-height 22px
 		color #464148
+
 	&__price
 		font-size 18px
 		line-height 22px
 		color $green
+
 	@media(max-width 950px)
 		width 200px
 		height 290px
+
 		&__wrap
 			height 190px
+
 		&__details
 			margin 10px 0
+
 	@media(max-width 480px)
 		width 80%
 		height 240px
+
 		&__wrap
 			height 140px

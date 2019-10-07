@@ -8,24 +8,30 @@
 		width 100%
 		height 100%
 		transition .3s ease-in
+
 		&_active
 			visibility visible
 			background-color rgba(0, 0, 0, .2)
+
 	&__slider-wrap
 		background-image url(/assets/images/slider-image.png)
 		background-size cover
+
 	&__main-wrap
 		padding 50px 0
+
 	&__services-wrap
 		padding 20px 0
 		background-color $light-blue
+
 	&__community-wrap
 			padding 20px 0
 			background-color $blue
+
 	@media(max-width 550px)
 		&__slider-wrap
 			background-position-x 40%
+
 	@media(max-width 480px)
 		&__main-wrap
 			padding 10px 0
-	

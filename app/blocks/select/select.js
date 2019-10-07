@@ -2,6 +2,8 @@ import $ from 'jquery';
 
 export const select = () => {
 	$('.js-select').on('click', function () {
+		$('.js-select-menu').slideUp(300);
+		$('.js-select').removeClass('select__field_active');
 		const $dropdown = $(this).parent('.js-dropdown');
 		$dropdown.find('.js-select-menu').slideToggle(300);
 		$dropdown.find('.js-select').toggleClass('select__field_active');

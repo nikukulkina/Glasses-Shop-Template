@@ -1,3 +1,4 @@
 mixin cart()
-	+b('a').cart(href='#')&attributes(attributes)
-		| cart (0)
+	+b.cart&attributes(attributes)
+		+e('a').icon(href='#')
+		+e('a').text(href='#') cart (0)

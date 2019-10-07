@@ -1,11 +1,14 @@
-mixin product(img, description, price, sale, NEW)
+mixin product(img, description, price, ribbon)
 	+b.product&attributes(attributes)
-		if NEW
+		if ribbon === 'new'
 			+e.ribbon NEW
-		if sale	
+		else if ribbon === 'sale'	
 			+e.ribbon._sale SALE
 		+e.wrap
 			+e('img').image(src=img)
-		+e.details
-			+e('p').name!=description
-			+e('span').price!=price
+		+e.bottom-wrap
+			+e('a').details(href='#')
+				+e('p').name!=description
+				+e('span').price!=price
+			+e.cart
+				+e('a').to-cart(href='#')

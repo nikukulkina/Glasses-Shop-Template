@@ -12,17 +12,26 @@
 		width 57%
 		justify-content space-between
 	&__bookmarks
-		margin 0 5px 0 8px
-		padding 10px
+		position relative
+		margin 0 3px
+		display block
+		width 37px
+		height 37px
+		font-size 17px
+		font-weight normal
 		text-decoration none
 		color #ffffff
 		background-color $green
 		border-radius 50%
 		transition background-color .3s ease-in
 		&:before
+			position absolute
+			top 50%
+			left 50%
 			font-family 'icomoon'
 			content '\f02c'
-		&:hover 
+			transform translate(-50%, -50%)
+		&:hover
 			background-color $blue
 
 	@media(max-width 900px)
@@ -32,7 +41,9 @@
 			width 100%
 	@media(max-width 550px)
 		margin 15px 0
-	@media(max-width 360px)
+	@media(max-width 400px)
 		&__bookmarks
-			margin-left 5px
+			width 34px
+			height 34px
+			font-size 15px
 	

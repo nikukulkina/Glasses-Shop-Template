@@ -1,26 +1,44 @@
 .cart
 	display flex
 	align-items center
-	font-weight 600
-	text-transform uppercase
-	text-decoration none
-	color $text-gray
-	&:before
-		margin-right 10px
-		padding 10px
-		font-family 'icomoon'
-		font-size 15px
+	&__text
+		margin-left 10px
+		font-weight 600
+		text-transform uppercase
+		text-decoration none
+		color $text-gray
+		transition color .3s ease-in
+		&:hover
+			text-decoration underline
+			color $blue
+	&__icon
+		position relative
+		display block
+		width 37px
+		height 37px
+		font-size 17px
 		font-weight normal
-		content '\f07a'
+		text-decoration none
 		color #ffffff
 		background-color $green
 		border-radius 50%
 		transition background-color .3s ease-in
-	&:hover 
-		color $blue
-
-	@media(max-width 360px)
-		font-size 14px
 		&:before
-			margin-right 5px
+			position absolute
+			top 50%
+			left 50%
+			font-family 'icomoon'
+			content '\f07a'
+			transform translate(-50%, -50%)
+		&:hover
+			background-color $blue
+
+	@media(max-width 400px)
+		&__icon
+			width 34px
+			height 34px
+			font-size 15px
+		&__text
+			margin-left 5px
+			font-size 13px
 

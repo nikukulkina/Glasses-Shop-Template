@@ -16,6 +16,7 @@
 		transform translateX(30%) translateY(0%) rotate(45deg)
 		color #ffffff
 		background-color $blue
+		border-bottom 1px solid $dark-blue
 		&:before,
 		&:after
 			position absolute
@@ -25,6 +26,7 @@
 			height 100%
 			content ''
 			background-color $blue
+			border-bottom 1px solid $dark-blue
 		&:before
 			right 100%
 		&:after
@@ -35,42 +37,51 @@
 			transform-origin top right
 			transform translateX(-30%) translateY(0%) rotate(-45deg)
 			background-color $green
+			border-bottom 1px solid green
 			&:before,
 			&:after
 				background-color $green
+				border-bottom 1px solid green
+
 	&__wrap
 		display flex
 		justify-content center
 		align-items center
-		height 230px
-		background-color #eff1f0
+		height 220px
 	&__image
 		transition .3s ease-in
 		&:hover
 			transform scale(1.1)
-	&__details
-		position relative
+	&__bottom-wrap
 		margin 15px 0
-		padding-right 47px
-		cursor pointer
+		display flex
+		justify-content space-between
+		align-items center
+	&__details
+		padding-right 5px
+		display block
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&__to-cart
+		position relative
+		display block
+		width 47px
+		height 47px
+		font-size 25px
+		color #ffffff
+		background-color $green
+		border-radius 50%
+		transition background-color .3s ease-in
 		&:before
 			position absolute
 			top 50%
-			right 0
-			display flex
-			justify-content center
-			align-items center
-			width 47px
-			height 47px
+			left 50%
 			font-family 'icomoon'
-			font-size 25px
 			content '\f291'
-			color #ffffff
-			background-color $green
-			border-radius 50%
-			transform translateY(-50%)
+			transform translate(-50%, -50%)
 		&:hover
-			text-decoration underline
+			background-color $blue
 	&__name
 		font-size 14px
 		line-height 22px
@@ -86,4 +97,8 @@
 			height 190px
 		&__details
 			margin 10px 0
-
+	@media(max-width 480px)
+		width 80%
+		height 240px
+		&__wrap
+			height 140px
